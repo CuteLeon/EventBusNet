@@ -1,8 +1,10 @@
-﻿using EventBusNet.PipelineMiddlewares;
+﻿using System.Diagnostics;
+using EventBusNet.PipelineMiddlewares;
 using EventBusNet.Resolvers;
 
 namespace EventBusNet.Raisers;
 
+[DebuggerStepThrough]
 public class DefaultEventRaiser(
     IEnumerable<IPipelineMiddleware> pipelineMiddlewares,
     IAsyncEventHandlerResolver asyncEventHandlerResolver) : IEventRaiser
