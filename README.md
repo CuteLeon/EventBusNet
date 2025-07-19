@@ -4,6 +4,13 @@ EventBusNet is a high-performance, extensible, and easy-to-use event bus library
 
 ---
 
+## Benchmark Results
+
+EventBusNet is engineered for speed. 
+* [Benchmark Results](EventBusNet.Benchmark/BenchmarkArtifacts/results/EventBusNet.Benchmark.Benchmark_EventBusNet-report-github.md)
+
+---
+
 ## Features
 
 - **High Performance**: Ultra-low overhead for event dispatching, as demonstrated by comprehensive benchmarks.
@@ -154,13 +161,6 @@ EventBusNet is a high-performance, extensible, and easy-to-use event bus library
     eventRaiser.Raise(new DynamicEvent());
     eventRaiser.Raise(new BusinessEvent1());
 ```
-
----
-
-## Benchmark Results
-
-EventBusNet is engineered for speed. 
-* [Benchmark Results](EventBusNet.Benchmark/BenchmarkArtifacts/results/EventBusNet.Benchmark.Benchmark_EventBusNet-report-github.md)
 
 ---
 
