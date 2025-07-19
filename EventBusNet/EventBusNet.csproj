@@ -4,7 +4,27 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>EventBusNet is a high-performance, extensible, and easy-to-use event bus library for .NET, designed to decouple event publishing and handling in modern applications. It supports both synchronous and asynchronous event processing, dynamic event subscription, and middleware pipelines.</Title>
+    <Description>EventBusNet is a high-performance, extensible, and easy-to-use event bus library for .NET, designed to decouple event publishing and handling in modern applications. It supports both synchronous and asynchronous event processing, dynamic event subscription, and middleware pipelines.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/CuteLeon/EventBusNet</RepositoryUrl>
+    <PackageTags>eventbus</PackageTags>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageIcon>EventBusNet.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\EventBusNet.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.7" />
