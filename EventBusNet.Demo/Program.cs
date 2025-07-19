@@ -78,6 +78,10 @@ internal class Program
             .AddSingleton<IBusinessComponent2, BusinessComponent2>()
             .AddSingleton<IBusinessComponent3, BusinessComponent3>()
             .AddSingleton<IBusinessComponentAll, BusinessComponentAll>();
+#if DEBUG
+        services.ValidateEventBusNet();
+#endif
+
         var serviceProvider = services.BuildServiceProvider();
 
         var dynamicComponent = serviceProvider.GetRequiredService<IDynamicComponent>();
