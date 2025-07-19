@@ -14,6 +14,8 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageIcon>EventBusNet.png</PackageIcon>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/CuteLeon/EventBusNet</PackageProjectUrl>
+    <Copyright>$(Authors)</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
