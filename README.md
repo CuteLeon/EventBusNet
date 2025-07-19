@@ -1,6 +1,7 @@
 # EventBusNet
 
-![](EventBusNet.png)
+![](https://github.com/CuteLeon/EventBusNet/blob/master/EventBusNet.png?raw=true)
+
 
 EventBusNet is a high-performance, extensible, and easy-to-use event bus library for .NET, designed to decouple event publishing and handling in modern applications. It supports both synchronous and asynchronous event processing, dynamic event subscription, and middleware pipelines, making it suitable for a wide range of scenarios from UI to backend services.
 
