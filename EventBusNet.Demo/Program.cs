@@ -1,5 +1,6 @@
 ﻿using EventBusNet.EventHandlers;
 using EventBusNet.Extensions;
+using EventBusNet.PipelineMiddlewares;
 using EventBusNet.Raisers;
 using EventBusNet.Utils;
 using Microsoft.Extensions.DependencyInjection;
@@ -54,6 +55,10 @@ internal class Program
         public Task Handle(BusinessEvent3 @event) => Task.CompletedTask;
     }
 
+    class CustomPipelineMiddleware : IPipelineMiddleware { public void Process(EventBase @event) { } }
+    class CustomBusiness1PipelineMiddleware : IEventPipelineMiddleware<BusinessEvent1> { public void Process(BusinessEvent1 @event) { } }
+    class CustomDynamicPipelineMiddleware : IEventPipelineMiddleware<DynamicEvent> { public void Process(DynamicEvent @event) { } }
+
     static void Main(string[] args)
     {
         var services = new ServiceCollection()
@@ -61,6 +66,9 @@ internal class Program
             {
                 options.Logging = true;
             })
+            .AddSingleton<IPipelineMiddleware, CustomPipelineMiddleware>()
+            .AddSingleton<IEventPipelineMiddleware<DynamicEvent>, CustomDynamicPipelineMiddleware>()
+            .AddSingleton<IEventPipelineMiddleware<BusinessEvent1>, CustomBusiness1PipelineMiddleware>()
             .AddEvent<BusinessEvent1, IBusinessComponent1>()
             .AddEvent<BusinessEvent2, IBusinessComponent2>()
             .AddEvent<BusinessEvent3, IBusinessComponent3>()
