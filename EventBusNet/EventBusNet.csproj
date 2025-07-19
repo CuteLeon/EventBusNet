@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>EventBusNet is a high-performance, extensible, and easy-to-use event bus library for .NET, designed to decouple event publishing and handling in modern applications. It supports both synchronous and asynchronous event processing, dynamic event subscription, and middleware pipelines.</Title>
+    <Title>EventBusNet</Title>
     <Description>EventBusNet is a high-performance, extensible, and easy-to-use event bus library for .NET, designed to decouple event publishing and handling in modern applications. It supports both synchronous and asynchronous event processing, dynamic event subscription, and middleware pipelines.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/CuteLeon/EventBusNet</RepositoryUrl>
