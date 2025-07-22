@@ -1,6 +1,6 @@
 ﻿namespace EventBusNet.Attributes;
 
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = false, Inherited = true)]
 public class EventHandlerDescriptionAttribute : Attribute
 {
     public int PriorityIndex { get; set; } = 0;

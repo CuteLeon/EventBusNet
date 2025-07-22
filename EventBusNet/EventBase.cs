@@ -13,3 +13,15 @@ public abstract record EventBase
         this.EventId = Interlocked.Increment(ref currentEventId);
     }
 }
+
+public record EventBase<TPayload> : EventBase
+{
+    public TPayload? Payload { get; set; }
+
+    protected EventBase() : base() { }
+
+    protected EventBase(TPayload payload) : this()
+    {
+        this.Payload = payload;
+    }
+}
